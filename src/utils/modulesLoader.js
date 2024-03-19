@@ -1,3 +1,5 @@
+import * as api from '../managers/api/api';
+
 export default function loadModules(router) {
 	const modules = [{
 		name: 'home',
@@ -17,8 +19,8 @@ export default function loadModules(router) {
 		icon: 'directions_car',
 		store: true,
 		showInHome: true,
-		menuItem: true
-		// loadedMethod: carsAgencyApi.getAllCars
+		menuItem: true,
+		loadedMethod: api.getAllCars
 	}];
 
 	modules.forEach(module => {
@@ -27,9 +29,9 @@ export default function loadModules(router) {
 			component: () => import(`../modules/${module.name}/${module.componentName}.vue`)
 		});
 
-		// if (module.loadedMethod) {
-		// 	module.loadedMethod(Store.getters['UsersStore/user'].account_id);
-		// }
+		if (module.loadedMethod) {
+			module.loadedMethod();
+		}
 
 		// Store.commit('UsersStore/setModules', processModules);
 		// Store.commit('UsersStore/loaded');
