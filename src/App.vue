@@ -1,9 +1,12 @@
 <script>
-export default {};
+import { mapGetters } from 'vuex';
+
+export default { computed: {	...mapGetters('CarsStore', ['cars']) } };
 </script>
 
 <template>
 	<div>Header</div>
+	{{ cars }}
 	<router-view></router-view>
 </template>
 
