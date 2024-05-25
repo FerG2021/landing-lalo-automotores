@@ -1,25 +1,73 @@
 <script>
 import { mapGetters } from 'vuex';
 
-export default { computed: {	...mapGetters('CarsStore', ['cars']) } };
+import MainFooter from './components/footer/MainFooter.vue';
+import MainHeader from './components/header/MainHeader.vue';
+import WhatsAppButtonContact from './components/WhatsAppButtonContact.vue';
+
+export default {
+	components: {
+		MainHeader,
+		MainFooter,
+		WhatsAppButtonContact
+	},
+	computed: {
+		...mapGetters('CarsStore', ['cars']),
+		...mapGetters('MarksStore', ['marks']),
+		...mapGetters('UsersStore', ['loaded', 'loading']),
+		isLoaded() {
+			console.log('this.loaded');
+			console.log(this.loaded);
+
+			console.log('this.loading');
+			console.log(this.loading);
+
+			return this.loaded && !this.loading;
+		}
+	}
+};
 </script>
 
 <template>
-	<div>Header</div>
-	{{ cars }}
-	<router-view></router-view>
+	<div class="main-container">
+		<div
+			v-if="isLoaded"
+			class="info-container"
+		>
+			<MainHeader />
+			<WhatsAppButtonContact/>
+			<router-view></router-view>
+			<MainFooter />
+		</div>
+		<div
+			v-else
+			class="loading-container"
+		>
+			<ProgressSpinner />
+		</div>
+	</div>
 </template>
 
 <style lang="scss">
 @import url('./assets/colors.css');
 
 * {
-	margin: 0;
-	padding: 0;
 	box-sizing: border-box;
 	font-family: 'Poppins', sans-serif;
-	.p-button-label {
-		padding: 5px;
-	}
 }
+
+body {
+	margin: 0px;
+}
+</style>
+
+<style lang="scss" scoped>
+	.main-container {
+		.loading-container {
+			height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
 </style>

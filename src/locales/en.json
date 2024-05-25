@@ -1,3 +1,81 @@
 {
-	"HELLO": "Hello"
+	"HELLO": "Hello",
+	"HEADER": {
+		"CONTACT": "Contact"
+	},
+	"RESUME_SECTION": {
+		"TOPIC1": {
+			"TITLE": "Choose location",
+			"SUBTITLE": "Choose Your location and find your best car"
+		},
+		"TOPIC2": {
+			"TITLE": "Pick-up date",
+			"SUBTITLE": "Select your pick-up date and time to book ypur car"
+		},
+		"TOPIC3": {
+			"TITLE": "Book your car",
+			"SUBTITLE": "Book your car and we will deliver it directly to you"
+		}
+	},
+	"CARS_SECTION": {
+		"TITLE": "Vehículos",
+		"SUBTITLE": "Encontrá tu vehículo en nuestra amplia variedad de marcas y modelos",
+		"MARKS_PLACEHOLDER": "Marcas",
+		"CATEGORIES_PLACEHOLDER": "Categorías",
+		"NOT_RESULT_FILTERS": "No existen vehículos para los filtros seleccionados",
+		"YOUR_CAR_LEGEND": "TU VEHÍCULO IDEAL, LO ENCONTRÁS EN LALO AUTOMOTORES"
+	},
+	"FEATURED_CARS": {
+		"TITLE": "Vehículos destacados",
+		"SUBTITLE": "Nuestros vehículos más destacados",
+		"SHOW_ALL_CARS": "Show all cars",
+		"VIEW_MORE": "Ver más",
+		"CONSULT": "Consultar"
+	},
+	"WHY_CHOOSE_US": {
+		"SUBTITLE": "¿Por qué elegirnos?",
+		"TITLE": "Ofrecemos la mejor experiencia en venta y postventa",
+		"BEST_PRICE": {
+			"TITLE": "Mejor precio garantizado",
+			"SUBTITLE": "El mejor precio del mercado"
+		},
+		"ATTENTION": {
+			"TITLE": "Atención personalizada",
+			"SUBTITLE": "En equipo de trabajo profesional para una experiencia única"
+		},
+		"MARKS": {
+			"TITLE": "Las mejores marcas",
+			"SUBTITLE": "Todas las marcas que buscás en un solo lugar"
+		}
+	},
+	"FOOTER": {
+		"CARS_TITLE": "Vehículos",
+		"SECTIONS_TITLE": "Secciones",
+		"DEVELOP_BY": "Develop by",
+		"FS_SOLUTIONS": "FSsolutions"
+	},
+	"BACK": "Atrás",
+	"CONTACT": {
+		"LABEL": "Contact Us",
+		"COMPLETE_FORM": "Complete the form",
+		"REQUIRED_FIELDS": "Required fields",
+		"CONTACT_FORM": {
+			"NAME": "NAME",
+			"LAST_NAME": "LAST NAME",
+			"DNI": "DNI",
+			"PHONE": "PHONE",
+			"EMAIL": "EMAIL",
+			"DEPARTMENT": "DEPARTMENT",
+			"MESSAGE": "MESSAGE" ,
+			"DIRECTION": "DIRECTION",
+			"AUTHORIZED_MESSAGE": "I authorize Lalo Automotores to store my data, as well as receive information via telephone or email.",
+			"SEND_LABEL": "Send",
+			"INVALID_EMAIL": "The email entered is invalid",
+			"INVALID_PHONE": "Please enter a valid phone number",
+			"INVALID_DNI": "Please enter a valid DNI"
+		}
+	},
+	"ABOUT_US": {
+		"TITLE": "About us"
+	}
 }
