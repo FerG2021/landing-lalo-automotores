@@ -65,8 +65,6 @@ export default {
 	.about-us-main-container {
 		.title-container {
 			padding: 20px;
-			.title-subtitle {
-			}
 		}
 		.img-container {
 			padding: 20px;

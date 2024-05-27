@@ -26,9 +26,6 @@ export default {
 			return Configuration;
 		},
 		carDescription() {
-			console.log('this.car.description');
-			console.log(this.car.description);
-
 			let description;
 
 			if (this.car.description) {
@@ -54,9 +51,6 @@ export default {
 			Store.dispatch('CarsStore/getCarById', this.$route.params.id).then(response => this.car = response);
 		},
 		getLabel(item) {
-			console.log('item');
-			console.log(item);
-
 			return `${item.label}: `;
 		}
 	}

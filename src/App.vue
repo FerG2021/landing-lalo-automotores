@@ -16,12 +16,6 @@ export default {
 		...mapGetters('MarksStore', ['marks']),
 		...mapGetters('UsersStore', ['loaded', 'loading']),
 		isLoaded() {
-			console.log('this.loaded');
-			console.log(this.loaded);
-
-			console.log('this.loading');
-			console.log(this.loading);
-
 			return this.loaded && !this.loading;
 		}
 	}

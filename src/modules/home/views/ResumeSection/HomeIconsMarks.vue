@@ -14,24 +14,7 @@ export default {
 			return false;
 		}
 	},
-	mounted() {
-		this.verifyWidth();
-		window.addEventListener('resize', this.verifyWidth);
-	},
 	methods: {
-		verifyWidth() {
-			var miDiv = document.getElementById("mainContainer");
-			var contenidoAncho = miDiv.scrollWidth;
-			var pantallaAncho = window.innerWidth;
-
-			if (contenidoAncho > pantallaAncho) {
-				miDiv.classList.remove('desktop-marks');
-				miDiv.classList.add('mobile-marks');
-			} else {
-				miDiv.classList.remove('mobile-marks');
-				miDiv.classList.add('desktop-marks');
-			}
-		},
 		clickMark(mark) {
 			Store.commit('CarsStore/filteredCarsByAttributeAndValue', {
 				attribute: 'mark_id',
@@ -45,11 +28,7 @@ export default {
 </script>
 
 <template>
-	<div
-		class="main-container"
-		ref="mainContainer"
-		id="mainContainer"
-	>
+	<div class="main-container">
 		<div
 			v-for="mark in marks"
 			:key="mark"
@@ -78,21 +57,17 @@ export default {
 	margin-top: 20px;
 	padding: 20px;
 	display: flex;
+	justify-content: center;
 	overflow-x: auto;
 	.marks-container {
 		display: flex;
+		margin: 0 20px;
 		.mark-item {
-			// border: 1px solid red;
-			// border-radius: 12px;
 			height: 80px;
 			width: 120px;
 			padding: 5px;
 			margin: 0 30px 0 30px;
-			// -webkit-box-shadow: var(--box-shadow);
-			// -moz-box-shadow: var(--box-shadow);
-			// box-shadow: var(--box-shadow);
 			transition: transform 0.3s ease;
-			// background-color: var(--white);
 			cursor: pointer;
 			&:hover {
 				transform: scale(1.1);
@@ -110,20 +85,14 @@ export default {
 	overflow-x: auto;
 	height: 100px;
 	align-items: center;
-	.centeredContent {
-		align-items: center;
-	}
 	.marks-container {
 		display: flex;
+		justify-content: center;
+		margin: 0 20px;
 		.mark-item {
-			// border-radius: 8px;
 			height: 60px;
 			width: 80px;
 			padding: 5px;
-			// margin: 0 30px 0 30px;
-			// -webkit-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.75);
-			// -moz-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.75);
-			// box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.75);
 		}
 	}
 }
