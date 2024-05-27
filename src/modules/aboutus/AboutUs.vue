@@ -28,19 +28,62 @@ export default {
 		<div class="img-container">
 			<img :src="AboutUs">
 		</div>
+
+		<div class="description-container">
+			<h3>
+				{{ $t('ABOUT_US.LALO_AUTOMOTORES') }}
+			</h3>
+
+			<p>
+				{{ $t('ABOUT_US.DESCRIPTION') }}
+			</p>
+		</div>
 	</div>
 </template>
 
 <style lang="scss" scoped>
-.about-us-main-container {
-	.title-container {
-		padding: 20px;
-	}
-	.img-container {
-		padding: 20px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
+/* DESKTOP*/
+@media only screen and (min-width: 801px) {
+	.about-us-main-container {
+		.title-container {
+			padding: 20px;
+		}
+		.img-container {
+			padding: 20px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		.description-container {
+			padding: 20px;
+		}
 	}
 }
+
+/* MOBILE */
+@media only screen and (max-width: 800px) {
+	.about-us-main-container {
+		.title-container {
+			padding: 20px;
+			.title-subtitle {
+			}
+		}
+		.img-container {
+			padding: 20px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			img {
+				width: 100%;
+			}
+		}
+		.description-container {
+			padding: 20px;
+			p {
+				font-size: 12px;
+			}
+		}
+	}
+}
+
 </style>
