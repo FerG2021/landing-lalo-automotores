@@ -30,7 +30,6 @@ export default {
 			this.$refs.sidebarheader.openSideBar();
 		},
 		clickContact() {
-			console.log('clickContact()');
 			this.$router.push('/contact');
 		}
 

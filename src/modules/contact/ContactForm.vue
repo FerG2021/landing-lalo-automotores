@@ -24,9 +24,6 @@ export default {
 		envAPI() {
 			const apiUrl = `${import.meta.env.VITE_URL}/contact`;
 
-			console.log('apiUrl');
-			console.log(apiUrl);
-
 			return apiUrl;
 		}
 	},

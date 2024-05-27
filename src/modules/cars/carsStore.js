@@ -54,13 +54,6 @@ export default {
 	},
 	actions: {
 		getCarById({ state }, id) {
-			console.log('id');
-			console.log(id);
-			console.log('state.cars');
-			console.log(state.cars);
-			console.log('state.cars.find(element => element.id === id)');
-			console.log(state.cars.filter(element => element.id === parseInt(id)));
-
 			return state.cars.find(element => element.id === parseInt(id));
 		}
 	}

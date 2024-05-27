@@ -7,7 +7,8 @@ export default {
 		},
 		subtitle: {
 			type: String,
-			required: true
+			required: false,
+			default: ''
 		}
 	}
 };
@@ -16,7 +17,7 @@ export default {
 <template>
 	<div class="main-container">
 		<h1 class="title"> {{ title }} </h1>
-		<h2 class="subtitle"> {{ subtitle }} </h2>
+		<h2 class="subtitle" v-if="subtitle"> {{ subtitle }} </h2>
 	</div>
 </template>
 
