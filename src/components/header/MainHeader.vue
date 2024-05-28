@@ -173,6 +173,7 @@ export default {
 			display: flex;
 			margin-right: 12px;
 			background-color: var(--white);
+			color: var(--grey);
 			border: none;
 			i {
 				font-size: 20px;

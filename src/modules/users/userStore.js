@@ -7,15 +7,18 @@ export default {
 		contact: [
 			{
 				icon: 'pi pi-facebook',
-				title: 'Facebook'
+				title: 'Facebook',
+				url: 'https://www.facebook.com/'
 			},
 			{
 				icon: 'pi pi-instagram',
-				title: 'Instagram'
+				title: 'Instagram',
+				url: 'https://www.instagram.com/'
 			},
 			{
 				icon: 'pi pi-whatsapp',
-				title: 'WhatsApp'
+				title: 'WhatsApp',
+				url: 'https://www.whatsapp.com/?lang=es_LA'
 			}
 		]
 	},

@@ -10,6 +10,11 @@ export default {
 		featuredCars() {
 			return this.cars.filter(element => !element.buyer_id && element.featured === 1).slice(0, 3);
 		}
+	},
+	methods: {
+		clickShowAllCars() {
+			this.$router.push('/cars');
+		}
 	}
 };
 </script>
@@ -35,7 +40,7 @@ export default {
 		</div>
 
 		<div class="more-cars-button-container">
-			<button class="show-all-button">
+			<button class="show-all-button" @click="clickShowAllCars()">
 				{{ $t('FEATURED_CARS.SHOW_ALL_CARS') }}
 				<i class="pi pi-arrow-right" style="font-size: 1rem"></i>
 			</button>
