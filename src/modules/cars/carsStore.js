@@ -1,6 +1,7 @@
 export default {
 	namespaced: true,
 	state: {
+		loaded: false,
 		cars: null,
 		filteredCars: [],
 		filterCategories: [],
@@ -14,6 +15,9 @@ export default {
 		]
 	},
 	getters: {
+		loaded(state) {
+			return state.loaded;
+		},
 		cars(state) {
 			return state.cars;
 		},
@@ -31,6 +35,9 @@ export default {
 		}
 	},
 	mutations: {
+		setLoaded(state) {
+			state.loaded = true;
+		},
 		setCars(state, cars) {
 			state.cars = cars;
 			state.filteredCars = cars;
