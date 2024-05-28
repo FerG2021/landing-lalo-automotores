@@ -12,7 +12,12 @@ export default {
 	data() {
 		return { visibleRight: false };
 	},
-	computed: { ...mapGetters('UsersStore', ['modules', 'contact']) },
+	computed: {
+		...mapGetters('UsersStore', ['modules', 'contact']),
+		sidebarModules() {
+			return this.modules.filter(module => module.showInHeader);
+		}
+	},
 	methods: {
 		openSideBar() {
 			this.visibleRight = !this.visibleRight;
@@ -30,7 +35,7 @@ export default {
 		<div class="main-container">
 			<div class="sections-container">
 				<div
-					v-for="item in modules"
+					v-for="item in sidebarModules"
 					:key="item"
 				>
 					<HeaderItem :item="item" />
@@ -51,7 +56,7 @@ export default {
 
 <style lang="scss" scoped>
 .main-container {
-	height: 96vh;
+	height: 100%;
 	.sections-container {
 		height: 80%;
 		display: flex;
