@@ -41,7 +41,7 @@ export default {
 			return window.innerHeight;
 		},
 		imageStyle() {
-			return this.screenWidth < 800 ? `object-fit: cover; width: ${this.screenWidth - 50}px; height: ${this.screenHeight - 200}px` : 'object-fit: fill; height: 80vh';
+			return this.screenWidth < 800 ? `object-fit: contain; width: ${this.screenWidth - 50}px; height: ${this.screenHeight - 200}px` : 'object-fit: contain; height: 80vh';
 		}
 	},
 	methods: {

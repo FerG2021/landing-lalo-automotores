@@ -78,7 +78,7 @@ export default {
 						class="images-multiple"
 					/>
 					<span class="image-description">
-						Click en la imagen para ver más
+						{{ $t('CARS_SECTION.SHOW_MORE_IMAGES') }}
 					</span>
 				</div>
 				<div class="info-container">
