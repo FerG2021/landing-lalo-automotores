@@ -77,6 +77,9 @@ export default {
 						:images="car.image"
 						class="images-multiple"
 					/>
+					<span class="image-description">
+						Click en la imagen para ver más
+					</span>
 				</div>
 				<div class="info-container">
 					<template
@@ -99,40 +102,92 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-.detail-car-main-container {
-	min-height: 100vh;
-	padding: 20px;
-	.go-back-button-container {
-		.back-button {
-			border: none;
-			cursor: pointer;
-			background-color: var(--white);
-			font-size: 18px;
-		}
-	}
-	.car-detail-container {
+/* DESKTOP*/
+@media only screen and (min-width: 801px) {
+	.detail-car-main-container {
+		min-height: 100vh;
 		padding: 20px;
-		display: flex;
-		flex-direction: column;
-		min-height: 88vh;
-		.image-info-container {
+		.go-back-button-container {
+			.back-button {
+				border: none;
+				cursor: pointer;
+				background-color: var(--white);
+				font-size: 18px;
+			}
+		}
+		.car-detail-container {
+			padding: 20px;
 			display: flex;
-			.images-container {
-				width: 50%;
-				.images-multiple {
+			flex-direction: column;
+			min-height: 88vh;
+			.image-info-container {
+				display: flex;
+				height: 50vh;
+				.images-container {
 					width: 80%;
+					display: flex;
+					flex-direction: column;
+					.images-multiple {
+						height: 100%;
+					}
+					.image-description {
+						margin-top: 10px;
+						font-size: 12px;
+						font-style: italic;
+					}
+				}
+				.info-container {
+					width: 50%;
+					display: flex;
+					flex-direction: column;
+					justify-content: space-around;
+					align-items: center;
 				}
 			}
-			.info-container {
-				width: 50%;
-				display: flex;
-				flex-direction: column;
-				justify-content: space-around;
-				align-items: center;
+			.description-container {
+				margin-top: 40px;
 			}
 		}
-		.description-container {
+	}
+}
+
+/* MOBILE */
+@media only screen and (max-width: 800px) {
+	.detail-car-main-container {
+		.go-back-button-container {
+			.back-button {
+				color: var(--dark);
+				border: none;
+				cursor: pointer;
+				background-color: var(--white);
+				font-size: 18px;
+			}
+		}
+		.car-detail-container {
 			padding: 20px;
+			display: flex;
+			flex-direction: column;
+			.image-info-container {
+				.images-container {
+					.images-multiple {
+					}
+					.image-description {
+						margin-top: 10px;
+						font-size: 12px;
+						font-style: italic;
+					}
+				}
+				.info-container {
+					margin-top: 20px;
+					display: flex;
+					flex-direction: column;
+					justify-content: space-around;
+					align-items: center;
+				}
+			}
+			.description-container {
+				padding: 20px;
+			}
 		}
 	}
 }

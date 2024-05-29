@@ -33,6 +33,15 @@ export default {
 	computed: {
 		firstImage() {
 			return this.images[0];
+		},
+		screenWidth() {
+			return window.innerWidth;
+		},
+		screenHeight() {
+			return window.innerHeight;
+		},
+		imageStyle() {
+			return this.screenWidth < 800 ? `object-fit: cover; width: ${this.screenWidth - 50}px; height: ${this.screenHeight - 200}px` : 'object-fit: fill; height: 80vh';
 		}
 	},
 	methods: {
@@ -44,21 +53,16 @@ export default {
 </script>
 
 <template>
-	<div>
-		<Image
+	<div class="images-multiple-main-container">
+		<img
 			:src="firstImage"
 			alt="Image"
 			class="image"
-			width="50"
-			imageStyle="border-radius: 8px; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);padding: 3px; width: 100%;"
 			@click="clickOpenImages(item)"
 		/>
 		<Galleria
 			v-model:visible="openGalleria"
 			:value="images"
-			:responsiveOptions="responsiveOptions"
-			:numVisible="9"
-			containerStyle="max-width: 50%"
 			:circular="true"
 			:fullScreen="true"
 			:showItemNavigators="true"
@@ -67,13 +71,14 @@ export default {
 				<img
 					:src="slotProps.item"
 					:alt="slotProps.item"
+					:style="imageStyle"
 				/>
 			</template>
 			<template #thumbnail="slotProps">
 				<img
 					:src="slotProps.item"
 					:alt="slotProps.item"
-					style="display: block; height: 5vh"
+					style="display: block; height: 5vh;"
 				/>
 			</template>
 		</Galleria>
@@ -81,9 +86,40 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-.image {
-	&:hover {
-		cursor: pointer;
+/* DESKTOP*/
+@media only screen and (min-width: 801px) {
+	.images-multiple-main-container {
+		&:hover {
+			opacity: .8;
+		}
+		.image {
+			border-radius: 8px;
+			box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+			padding: 3px;
+			height: 100%;
+			width: 100%;
+			cursor: pointer;
+			object-fit: contain;
+		}
 	}
 }
+
+/* MOBILE */
+@media only screen and (max-width: 800px) {
+	.images-multiple-main-container {
+		&:hover {
+			opacity: .8;
+		}
+		.image {
+			border-radius: 8px;
+			box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+			padding: 3px;
+			height: 100%;
+			width: 100%;
+			cursor: pointer;
+			object-fit: contain;
+		}
+	}
+}
+
 </style>
