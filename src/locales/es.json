@@ -24,7 +24,8 @@
 		"CATEGORIES_PLACEHOLDER": "Categorías",
 		"NOT_RESULT_FILTERS": "No se encontraron vehículos para los filtros aplicados",
 		"YOUR_CAR_LEGEND": "TU VEHÍCULO IDEAL, LO ENCONTRÁS EN LALO AUTOMOTORES",
-		"WITH_OUT_DESCRIPTION": "El vehículo no tiene descripción"
+		"WITH_OUT_DESCRIPTION": "El vehículo no tiene descripción",
+		"SHOW_MORE_IMAGES": "Click en la imagen para ver más"
 	},
 	"FEATURED_CARS": {
 		"TITLE": "Vehículos destacados",
