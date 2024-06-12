@@ -40,7 +40,10 @@ export default {
 		</div>
 
 		<div class="more-cars-button-container">
-			<button class="show-all-button" @click="clickShowAllCars()">
+			<button
+				class="show-all-button"
+				@click="clickShowAllCars()"
+			>
 				{{ $t('FEATURED_CARS.SHOW_ALL_CARS') }}
 				<i class="pi pi-arrow-right" style="font-size: 1rem"></i>
 			</button>
@@ -136,6 +139,7 @@ export default {
 				cursor: pointer;
 				transition: transform 0.3s ease;
 				background-color: var(--white);
+				color: var(--dark);
 				&:hover {
 					transform: scale(1.1);
 				}
