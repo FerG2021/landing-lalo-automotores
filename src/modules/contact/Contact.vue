@@ -1,23 +1,17 @@
 <script>
+import TitleSubtitle from '../../components/TitleSubtitle.vue';
+
 import ContactForm from './ContactForm.vue';
 import Contact from './images/contact.svg';
 
 export default {
 	name: 'ContactComponent',
-	components: { ContactForm },
+	components: {
+		ContactForm,
+		TitleSubtitle
+	},
 	data() {
 		return { Contact: Contact };
-	},
-	computed: {
-		contactLabel() {
-			return this.$t('CONTACT.LABEL');
-		},
-		completeFormLabel() {
-			return this.$t('CONTACT.COMPLETE_FORM');
-		},
-		requiredFieldsLabel() {
-			return this.$t('CONTACT.REQUIRED_FIELDS');
-		}
 	}
 };
 </script>
@@ -25,18 +19,20 @@ export default {
 <template>
 	<div class="contact-main-container">
 		<div class="contact-label-container">
-			{{ contactLabel }}
+			<TitleSubtitle
+				:title="$t('CONTACT.LABEL')"
+			/>
 		</div>
 		<div class="image-contact-container">
 			<img :src="Contact" class="image-contact">
 		</div>
 		<div class="form-container">
 			<h3>
-				{{ completeFormLabel }}
+				{{ $t('CONTACT.COMPLETE_FORM') }}
 			</h3>
 			<p class="required-fields-label">
 				<span class="astherics">*</span>
-				{{ requiredFieldsLabel }}
+				{{ $t('CONTACT.REQUIRED_FIELDS') }}
 			</p>
 			<div class="form-content-container">
 				<ContactForm />

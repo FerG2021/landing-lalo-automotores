@@ -42,7 +42,6 @@ export default {
 <style lang="scss" scoped>
 .p-multiselect {
 	width: 100%;
-	margin: 0 10px;
 }
 
 </style>

@@ -12,11 +12,12 @@ export default {
 		WhatsAppButtonContact
 	},
 	computed: {
-		...mapGetters('CarsStore', ['cars']),
-		...mapGetters('MarksStore', ['marks']),
+		...mapGetters('CarsStore', { carsLoaded: 'loaded' }),
+		...mapGetters('MarksStore', { marksLoaded: 'loaded' }),
+		...mapGetters('CategoriesStore', { categoriesLoaded: 'loaded' }),
 		...mapGetters('UsersStore', ['loaded', 'loading']),
 		isLoaded() {
-			return this.loaded && !this.loading;
+			return this.carsLoaded && this.marksLoaded && this.categoriesLoaded;
 		}
 	}
 };

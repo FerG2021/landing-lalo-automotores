@@ -28,9 +28,6 @@ export default {
 		},
 		clickOpenSideBar() {
 			this.$refs.sidebarheader.openSideBar();
-		},
-		clickContact() {
-			this.$router.push('/contact');
 		}
 
 	}
@@ -65,12 +62,6 @@ export default {
 					:class="item.title"
 				/>
 			</span>
-			<span
-				class="contact-legend"
-				@click="clickContact()"
-			>
-				{{ $t('HEADER.CONTACT') }}
-			</span>
 
 			<button
 				@click="clickOpenSideBar()"
@@ -89,7 +80,7 @@ export default {
 @media only screen and (min-width: 801px) {
 .container{
 	height: 7vh;
-	padding: 2px;
+	padding: 5px;
 	display: flex;
 	justify-content: space-between;
 	.logo-container {
@@ -173,6 +164,7 @@ export default {
 			display: flex;
 			margin-right: 12px;
 			background-color: var(--white);
+			color: var(--grey);
 			border: none;
 			i {
 				font-size: 20px;
