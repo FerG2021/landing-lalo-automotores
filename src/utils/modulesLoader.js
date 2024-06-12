@@ -62,8 +62,8 @@ const MODULES = [
 		path: '/contact',
 		icon: 'directions_car',
 		store: false,
-		showInHeader: false,
-		menuItem: false
+		showInHeader: true,
+		menuItem: true
 	}
 ];
 

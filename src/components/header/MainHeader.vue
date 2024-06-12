@@ -28,9 +28,6 @@ export default {
 		},
 		clickOpenSideBar() {
 			this.$refs.sidebarheader.openSideBar();
-		},
-		clickContact() {
-			this.$router.push('/contact');
 		}
 
 	}
@@ -64,12 +61,6 @@ export default {
 					class="contact-item"
 					:class="item.title"
 				/>
-			</span>
-			<span
-				class="contact-legend"
-				@click="clickContact()"
-			>
-				{{ $t('HEADER.CONTACT') }}
 			</span>
 
 			<button

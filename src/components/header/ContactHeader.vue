@@ -23,6 +23,11 @@ export default {
 	color: var(--grey);
 	i {
 		font-size: 1.8rem;
+		transition: transform 0.3s ease;
+		&:hover {
+			transform: scale(1.2);
+		}
 	}
+
 }
 </style>

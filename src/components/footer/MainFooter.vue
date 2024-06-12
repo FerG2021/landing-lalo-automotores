@@ -64,6 +64,7 @@ export default {
 			<span> {{ $t('FOOTER.DEVELOP_BY') }} </span>
 			<a
 				href="http://fssolutions.com.ar/"
+				target="_blank"
 			>
 				{{ $t('FOOTER.FS_SOLUTIONS') }}
 			</a>
