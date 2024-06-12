@@ -89,7 +89,7 @@ export default {
 @media only screen and (min-width: 801px) {
 .container{
 	height: 7vh;
-	padding: 2px;
+	padding: 5px;
 	display: flex;
 	justify-content: space-between;
 	.logo-container {

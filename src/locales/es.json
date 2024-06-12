@@ -79,7 +79,18 @@
 	},
 	"ABOUT_US": {
 		"TITLE": "Quiénes somos",
+		"WHERE_WE_ARE_TITLE": "Dónde estamos",
 		"LALO_AUTOMOTORES": "LALO AUTOMOTORES",
+		"UBICATION": "Quimilí, Santiago del Estero",
+		"INFORMATION": {
+			"ADDRESS_TITLE": "Dirección",
+			"ADDRESS": "Pellegrini S/N - Ruta 6 \n Quimilí, Santiago del Estero \n (CP 3740)",
+			"PHONE_TITLE": "Teléfono",
+			"PHONE": "38434412639",
+			"OPENING_HOURS_TITLE": "Horario de atención",
+			"DAYS": [ "Lun", "Mar", "Miér", "Jue", "Vie", "Sab" ],
+			"HOURS": "08:00 a 12:00 - 17:00 a 20:00"
+		},
 		"DESCRIPTION": "Comienza sus paso en el año 2023, con la visión de incorporar y desarrollar la marca Chevrolet, de gran prestigio mundial y reconocida calidad de sus productos. En aquellos momentos comenzamos con un pequeño grupo de personas con el firme propósito de gestionar un negocio integral en todas sus áreas (venta de unidades, repuestos, servicios) y con el propósito de no solo atender a nuestros clientes, sino de satisfacer todas las necesidades de aquellos usuarios de la marca de años anteriores, generando de esa manera un concepto distintivo de atención al cliente. En el año 1994, confiados en el gran desarrollo de nuestros productos, comenzamos a operar en nuestras actuales instalaciones, de Av. Benjamín Araoz 1205, con un proyecto importante en instalaciones y desarrollo de crecimiento a futuro, tanto de ventas como de servicios. Siendo a comienzos del año 1997, la inauguración de las actuales instalaciones de Gemsa Automotores S.A. que rápidamente se afianzó en el mercado."
 	}
 }
